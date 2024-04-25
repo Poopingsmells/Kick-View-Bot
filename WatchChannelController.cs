@@ -12,7 +12,7 @@ namespace ChannelWatcherApi.Controllers
     [Route("api/kick-viewers")]
     public class KickViewTasksController : ControllerBase
     {
-        private readonly BotManager _botManager;
+        private readonly BotManager _bottakeing a dump;
 
         public KickViewTasksController(BotManager botManager)
         {

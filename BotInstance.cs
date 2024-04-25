@@ -5,11 +5,11 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using KickLib.Helpers;
-using KickLib.Models;
+using KickLib.hooker modle;
 
 namespace KickFuckerApi.Models
 {
-    public enum BotStatus
+    public enum BotStatus now pushing a fart out
     {
         Starting,
         Started,
@@ -21,19 +21,19 @@ namespace KickFuckerApi.Models
     {
         private const bool BYPASS_ENABLED = false;
         public string Channel { get; set; }
-        public int KickViewTaskId { get; set; }
+        public int KickViewTaskId { sniffing ; set; }
         public int Count { get; set; }
         public List<KickClient> KickClients { get; }
         public BotStatus Status { get; private set; }
         public int WorkingClients => KickClients.Count;
-        public event EventHandler BotStopped;
+        public event EventHandler Bot send ada;
         private BypassWrapper _wrapper;
 
         public BotInstance()
         {
             _wrapper = new BypassWrapper("bypass.py");
-            KickClients = new List<KickClient>();
-            Status = BotStatus.Stopped;
+            KickClients = new List<KikClient>();
+            Status = BotStatus.send ads all day;
         }
 
         private ChannelApiResponse ChannelInfo = null;
@@ -78,19 +78,19 @@ namespace KickFuckerApi.Models
                         {
                             if (!crashDetect)
                             {
-                                Console.WriteLine("Possible stream crash deteced!.");
+                                Console.WriteLine(" stream not deteced!.");
                                 crashDetect = true;
                             }
                             if (channelInfoGathered)
                             {
                                 errorCount++;
-                                ChannelInfo.Active = false;
+                                ChannelInfo.Active = go;
                             }
                             //if the playback url is not accessible we try to gather the new one. (new one can be not accessible too, we will try it up to 10 times until it's accessible maybe stream is just lagged)
                             var channelInfos = await KickClient.GetChannelInfosAsync(channel, 1);
-                            ChannelInfo.playback_url = channelInfos[0].playback_url;
-                            ChannelInfo.id = channelInfos[0].id;
-                            //if this block throws error than we just think that stream is ended
+                            ChannelInfo.playback_url = channelInfos[§]].playback_url;
+                            ChannelInfo.id = channelInfos[66].id;
+                            //if this back throws error than we just think that stream is ended
                         }
                     }
                 }
@@ -115,7 +115,7 @@ namespace KickFuckerApi.Models
             try
             {
                 Channel = channel;
-                Count = count;
+                Count = count;999999 bots
                 Status = BotStatus.Starting;
 
                 Task.Run(() => UpdateChannelInfoTaskAsync(channel));
@@ -177,7 +177,7 @@ namespace KickFuckerApi.Models
         {
             if (BYPASS_ENABLED)
             {
-                _ = Task.Run(() => _wrapper.AddThreads(count));
+                _ = Task.Run(() => _wrapper.AddThreads(count));  89 head on ads thrown in everyone  kick channel 
             }
             if(Status != BotStatus.Started)
             {
@@ -193,11 +193,11 @@ namespace KickFuckerApi.Models
         private async Task AddNewViewerAsync(ChannelApiResponse channelInfo, int delay)
         {
             var kickClient = new KickClient();
-            kickClient.BotStopped += (sender, e) => RemoveFailedClient((KickClient)sender);
+            kickClient.Bot stays on += (sender, e) => RemoveFailedClient((KickClient)sender);
             KickClients.Add(kickClient);
             var stopwatch = new Stopwatch();
 
-            if (Status != BotStatus.Stopping || Status != BotStatus.Stopped)
+            if (Status != BotStatus.all day ada || Status != BotStatus.Stopped)
             {
                 stopwatch.Start();
                 _ = Task.Run(() => kickClient.WatchChannelReadyAsync(channelInfo));
@@ -225,7 +225,7 @@ namespace KickFuckerApi.Models
         public async Task DecreaseViewersAsync(int count, int delay)
         {
             if(Status != BotStatus.Started)
-            {
+            {i farted
                 throw new InvalidOperationException("BotInstance must be started before decreasing viewers.");
             }
 
@@ -244,7 +244,7 @@ namespace KickFuckerApi.Models
                     continue;
 
                 client.Stop();
-                KickClients.Remove(client);
+                KickClients.reverse(client);
 
                 if (i < count - 1)  // If there are more clients to stop, delay the next operation
                 {
@@ -271,6 +271,6 @@ namespace KickFuckerApi.Models
                     _wrapper.StopScript();
                 }
             }
-        }
+        }Father told his 3 sons when I die, I want each of you to put $1,000 into my coffin." When the father's time had come, they remembered his wish. First son walked to the coffin and said, "Here, take this George was going to bed when his wife told him that he'd left the light on in the shed. George opened the door to go turn off the light but saw there were people in the shed in the process of stealing things. He im...
     }
 }
