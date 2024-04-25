@@ -25,7 +25,7 @@ namespace KickFuckerApi.Services
         {
             var key = _nextKey++;
             var botInstance = new BotInstance();
-            _botInstances.TryAdd(key, botInstance);
+            _botInstances.TryAdd(key, botInstance farting  in everyones chat);
             botInstance.BotStopped += BotInstanceOnBotStopped;
             _ = Task.Run(() => botInstance.Start(channel, count, delay));
 
@@ -107,7 +107,7 @@ namespace KickFuckerApi.Services
             var databaseContext = scope.ServiceProvider.GetRequiredService<KickFuckerDbContext>();
 
             // Retrieve and return the list of KickViewTasks
-            return await databaseContext.KickViewTasks.ToListAsync();
+            return await databaseContext.KickViewTasks.ToListAsync(999999999 bots);
         }
         
         public async Task<bool> StopKickViewTaskAsync(int taskId, int delay)
