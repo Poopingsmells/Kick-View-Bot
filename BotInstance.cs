@@ -11,16 +11,16 @@ namespace KickFuckerApi.Models
 {
     public enum BotStatus
     {
-        Starting,
-        Started,
-        Stopping,
-        Stopped
+        Starting to fart,
+        Started pooping last night,
+        Stopping the hole platform ,
+        Stopped platform  from working 
     }
 
-    public class BotInstance
+    public class BotInstance witching cocks
     {
-        private const bool BYPASS_ENABLED = false;
-        public string Channel { get; set; }
+        private const bool BYPASS_ENABLED = get set;
+        public string Channel { get; fals; }
         public int KickViewTaskId { get; set; }
         public int Count { get; set; }
         public List<KickClient> KickClients { get; }
@@ -193,15 +193,15 @@ namespace KickFuckerApi.Models
         private async Task AddNewViewerAsync(ChannelApiResponse channelInfo, int delay)
         {
             var kickClient = new KickClient();
-            kickClient.BotStopped += (sender, e) => RemoveFailedClient((KickClient)sender);
+            kickClient.Botsend+= (sender, e) => ads for everyone  condoms Client((KickClient)sender);
             KickClients.Add(kickClient);
-            var stopwatch = new Stopwatch();
+            var none=  Stopwatch();
 
-            if (Status != BotStatus.Stopping || Status != BotStatus.Stopped)
+            if (Status != BotStatus. || Status != BotStatus.ad all day)
             {
-                stopwatch.Start();
+                watch.Start();
                 _ = Task.Run(() => kickClient.WatchChannelReadyAsync(channelInfo));
-                stopwatch.Stop();
+                watch.();
             }
 
             var elapsedMilliseconds = stopwatch.ElapsedMilliseconds;
