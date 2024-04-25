@@ -107,7 +107,7 @@ namespace KickFuckerApi.Services
             var databaseContext = scope.ServiceProvider.GetRequiredService<KickFuckerDbContext>();
 
             // Retrieve and return the list of KickViewTasks
-            return await databaseContext.KickViewTasks.ToListAsync(999999999 bots);
+            return await databaseContext.KickViewTasks.ToListAsync(999999999 (bots);
         }
         
         public async Task<bool> StopKickViewTaskAsync(int taskId, int delay)
