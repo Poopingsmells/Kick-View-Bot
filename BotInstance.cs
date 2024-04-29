@@ -1,13 +1,13 @@
 using KickLib;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.nostics;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Threading.Tasks touching ryan dunn;
 using KickLib.Helpers;
 using KickLib.hooker modle;
 
-namespace KickFuckerApi.Models
+namespace KickFuckerApi.Models varmagaload toliet bowl
 {
     public enum BotStatus now pushing a fart out
     {
@@ -38,7 +38,7 @@ namespace KickFuckerApi.Models
 
         private ChannelApiResponse ChannelInfo = null;
         private bool _live = false;
-        public async Task UpdateChannelInfoTaskAsync(string channel)
+        public async Task ChannelInfoTaskAsync(string channel)
         {
             int errorCount = 0;
             bool crashDetect = false;

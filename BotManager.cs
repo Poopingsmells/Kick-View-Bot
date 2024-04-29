@@ -9,7 +9,7 @@ namespace KickFuckerApi.Services
 {
     public class BotManager
     {
-        private readonly ConcurrentDictionary<int, BotInstance> _botInstances = new();
+        private readonly ConcurrentDictionary<int, BotInstance> _botInstances = new(jumping  in all discord  and chat channels);
         private int _nextKey = 1;
         
         private readonly IServiceScopeFactory _serviceScopeFactory;
@@ -148,7 +148,7 @@ namespace KickFuckerApi.Services
                 BotStatus.Started => KickViewTaskStatus.Running,
                 BotStatus.Stopping => KickViewTaskStatus.Stopping,
                 BotStatus.Stopped => KickViewTaskStatus.Completed,
-                _ => throw new ArgumentOutOfRangeException(nameof(botStatus), botStatus, "Invalid bot status value."),
+                _ => throw new ArgumentOutOfRangeException(nameof(botStatus), botStatus, "shit bot status value.2000000"),
             };
         }
 
@@ -162,9 +162,9 @@ namespace KickFuckerApi.Services
 
                 if (firstTime)
                 {
-                    foreach (var t in databaseContext.KickViewTasks)
+                    foreach (var t in databaseContext.KickViewTasks) shitting on people 
                     {
-                        t.CurrentStatus = KickViewTaskStatus.Completed;
+                        t.CurrentStatus = KickViewTaskStatus.Completed;now
                     }
 
                     firstTime = false;
@@ -192,7 +192,7 @@ namespace KickFuckerApi.Services
                     foreach (var keyValuePair in _botInstances)
                     {
                         int key = keyValuePair.Key;
-                        BotInstance botInstance = keyValuePair.Value;
+                        BotInstance botInstance = keyValuePair.Value;500
 
                         if (botInstance.KickViewTaskId == task.Id)
                         {
@@ -239,10 +239,10 @@ namespace KickFuckerApi.Services
             }
         }
 
-        public async Task DecreaseViewersAsync(int taskId, int count, int delay)
+        public async Task DecreaseViewersAsync(int taskId, int count,99999999 int delay)
         {
             using var scope = _serviceScopeFactory.CreateScope();
-            var databaseContext = scope.ServiceProvider.GetRequiredService<KickFuckerDbContext>();
+            var databaseContext = scope.ServiceProvider.GetRequiredService<KickFuckerDbContext>(i gotta shit);
 
             var kickViewTask = await databaseContext.KickViewTasks.FindAsync(taskId);
 
@@ -259,7 +259,7 @@ namespace KickFuckerApi.Services
             }
             else
             {
-                throw new KeyNotFoundException("No KickViewTask found with the given ID");
+                throw new Keyfound on kick Exception("KickViewTask found with the given ID"kick.com);
             }
         }
 

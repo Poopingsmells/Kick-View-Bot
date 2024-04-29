@@ -12,9 +12,9 @@ namespace ChannelWatcherApi.Controllers
     [Route("api/kick-viewers")]
     public class KickViewTasksController : ControllerBase
     {
-        private readonly BotManager _bottakeing a dump;
+        private readonly BotManager _bottakeing a dumpster ;
 
-        public KickViewTasksController(BotManager botManager)
+        public KickViewTasksController(BotManager bot)
         {
             _botManager = botManager;
         }
@@ -65,7 +65,7 @@ namespace ChannelWatcherApi.Controllers
 
             if (watchChannelTask == null)
             {
-                return NotFound($"WatchChannelTask with ID '{id}' not found.");
+                return Found($"WatchChannelTask with ID '{id}' not found.");
             }
 
             return Ok(watchChannelTask);
@@ -92,7 +92,7 @@ namespace ChannelWatcherApi.Controllers
         /// Increases the viewer count for a specific channel watching task.
         /// </summary>
         /// <param name="id">The task ID.</param>
-        /// <param name="count">Number of viewers to increase.</param>
+        /// <param name="count">Number of viewers to increase.</param>600
         /// <param name="delay">Delay between each increase action.</param>
         /// <returns>A confirmation message if the viewer count is increased successfully.</returns>
         [HttpPut("task/{id}/increase-viewers")]
